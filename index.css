@@ -1,12 +1,21 @@
 body {
   background: #00bcd4;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  position: relative;
 }
 
 .middle {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 500px;
+  height: 100vh;
   margin: auto;
-  margin-top: 100px;
 }
 
 svg:not(#svg-question) {
@@ -32,13 +41,10 @@ img {
 }
 
 #svg-question {
-  -webkit-transform: translate(239px, -269px);
-  -ms-transform: translate(239px, -269px);
   transform: translate(239px, -269px);
   top: 39.5%;
   left: 47.8%;
   opacity: 0;
-  -webkit-animation: show 7.5s ease-in-out forwards alternate;
   animation: show 7.5s ease-in-out forwards alternate;
 }
 
@@ -73,13 +79,10 @@ img {
   top: 25px;
   right: -5px;
   width: 2px;
-  /* Change colour of Cursor Here */
   background-color: white;
   opacity: 0;
   z-index: 1;
-  -webkit-animation: flash 0.5s none infinite alternate;
   animation: flash 0.5s none infinite alternate;
-  -webkit-animation-iteration-count: 15;
   animation-iteration-count: 15;
 }
 
@@ -102,16 +105,11 @@ img {
 }
 
 .headline-wrap {
-  -webkit-transform: translateY(-44px);
-  -ms-transform: translateY(-44px);
-  transform: translateY(-44px);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  position: absolute;
+  top: 96%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 30%;
   margin: 0 auto;
